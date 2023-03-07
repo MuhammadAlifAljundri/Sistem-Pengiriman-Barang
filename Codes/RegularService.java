@@ -5,7 +5,7 @@ public class RegularService implements ShipmentStrategy{
 
     public RegularService() {
         rate = 0;
-        est = "3-5 days";
+        est = "3-5 hari";
     }
 
     @Override

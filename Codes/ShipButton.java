@@ -8,9 +8,9 @@ public class ShipButton implements Shipment{
 
 	@Override
 	public void connectTo (Ship warehouse) {
-		System.out.println("\nConnecting to shipping warehouse ...");
+		System.out.println("\nMenghubungkan ke Warehouse ...");
 		this.warehouse = warehouse;
-		System.out.println("--> Warehouse connected");
+		System.out.println("--> Terhubung ke Warehouse");
 	}
 
     @Override
@@ -19,12 +19,12 @@ public class ShipButton implements Shipment{
 			boolean shipStatus = warehouse.ship();
 
 			if ( shipStatus )
-				System.out.println("--> Shipment done succesfully! ");
+				System.out.println("--> Pengiriman berhasil dilakukan! ");
 			else
-				System.out.println("--> Shipment failed!");
+				System.out.println("--> pengiriman gagal!");
 		}
 		else {
-			System.out.println("Warehouse not Connected!");
+			System.out.println("Tidak terhubung ke Warehouse!");
 		}
     }
 

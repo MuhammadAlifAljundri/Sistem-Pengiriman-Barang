@@ -5,7 +5,7 @@ public class EconomyService implements ShipmentStrategy{
 
     public EconomyService() {
         rate = 0;
-        est = "6-15 days";
+        est = "6-15 hari";
     }
 
     @Override

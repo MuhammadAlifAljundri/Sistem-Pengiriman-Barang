@@ -12,7 +12,7 @@ public class Warehouse implements Ship {
     
     @Override
     public void addItem (Item item) {
-        System.out.println("Adding: " + item.getId() + " (weight: " + item.getWeight() + " Kg) to shipping warehouse ...");
+        System.out.println("Menambahkan: " + item.getId() + " (berat : " + item.getWeight() + " Kg) ke gudang pengiriman ...");
 		this.items.add (item);
     }
 
@@ -34,9 +34,9 @@ public class Warehouse implements Ship {
 
     @Override
     public void connectTo(ShipmentStrategy service) {
-        System.out.println("\nConnecting to shipping service ... ");
+        System.out.println("\nMenghubungkan ke layanan pengiriman ... ");
 		this.service = service;
-		System.out.println("--> Connected to selected service : " + service.getServiceName() +"\n");
+		System.out.println("-->  Terhubung ke layanan yang dipilih : " + service.getServiceName() +"\n");
     }
 
     @Override
@@ -45,13 +45,13 @@ public class Warehouse implements Ship {
         if ( !isEmpty() && service != null ) {
             shipmentStatus = true;
 			service.count(calculateWeight());
-            System.out.println("--> Total weight: " + calculateWeight() + " Kg");
-            System.out.println("--> Total rate: Rp." + service.getRate());
-			System.out.println("\nThe package will be shipping by " + service.getServiceName()+" Service.");
-            System.out.println("Estimated time of arrival: " + service.getEst() + ".");
+            System.out.println("--> Total berat: " + calculateWeight() + " Kg");
+            System.out.println("--> Total harga: Rp." + service.getRate());
+			System.out.println("\nPaket akan dikirim dengan layanan " + service.getServiceName()+".");
+            System.out.println("Perkiraan paket akan tiba: " + service.getEst() + ".");
 		}
         else {
-            System.out.println("\nSorry, your package is empty or you haven't selected the service yet.");
+            System.out.println("\nMaaf, Paketmu kosong atau kamu belum memilih layanan pengiriman");
         }
 
         return shipmentStatus;

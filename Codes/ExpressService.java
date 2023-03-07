@@ -5,7 +5,7 @@ public class ExpressService implements ShipmentStrategy{
     
     public ExpressService() {
         rate = 0;
-        est = "1-2 days";
+        est = "1-2 hari";
     }
 
     @Override
